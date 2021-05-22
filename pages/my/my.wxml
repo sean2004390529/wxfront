@@ -1,0 +1,4 @@
+<view class="container">
+  个人中心
+  <button type="primary" bindtap="toLogin">登 录</button>
+</view>

@@ -1,0 +1,21 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}" ></mp-toptips>
+<mp-form id="form" rules="{{rules}}" models="{{formData}}">
+  <mp-cells title="用户名密码登录" >
+    <mp-cell prop="username" title="用户名" ext-class="">
+      <input bindinput="formInputChange" data-field="username" class="weui-input" placeholder="请输入用户名" />
+    </mp-cell>
+    <mp-cell prop="password" title="密码" ext-class="">
+      <input bindinput="formInputChange" data-field="password" password class="weui-input" placeholder="请输入密码"/>
+    </mp-cell>
+    <mp-cell prop="vcode" title="验证码" ext-class=" weui-cell_vcode">
+      <input bindinput="formInputChange" data-field="vcode" class="weui-input" placeholder="请输入验证码"/>
+      <image slot="footer" class="weui-vcode-img" src="/image/code.JPG" style="width: 120px"></image>
+    </mp-cell>
+  </mp-cells>
+</mp-form>
+
+<view class="button-sp-area">
+  <button type="primary" bindtap="submitLogin"> 登 录 </button>
+  <button type="primary" plain="true" bindtap="signup">新用户注册</button>
+  <button type="primary" plain="true" bindtap="resetPw">忘记密码</button>
+</view>
